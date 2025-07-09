@@ -2,6 +2,8 @@
 
 A full-stack product management application built with .NET 8.0, featuring a Web API backend and a Blazor Server frontend for managing products in an e-commerce or inventory system.
 
+![image](https://github.com/user-attachments/assets/54787253-05f3-448e-bb77-1ca387a91b40)
+
 ## 🚀 Features
 
 - **Product Management**: Create, view, and manage products with name and pricing
@@ -235,9 +237,6 @@ The API is configured to allow cross-origin requests. Modify in `Program.cs` if 
    - Run `dotnet ef migrations add InitialCreate`
    - Run `dotnet ef database update`
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👥 Authors
 
