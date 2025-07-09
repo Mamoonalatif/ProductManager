@@ -44,7 +44,7 @@ The solution consists of two main projects:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/ProductManager.git
+git clone https://github.com/Mamoonalatif/ProductManager.git
 cd ProductManager
 ```
 
@@ -241,7 +241,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Mamoona Latif** - *Initial work* - [Mamoonalatif](https://github.com/Mamoonalatif)
 
 ## 🙏 Acknowledgments
 
