@@ -1,0 +1,58 @@
+﻿@page "/"
+@using ProductClient.Services
+@using ProductClient.Models
+@inject ProductService ProductService
+@rendermode InteractiveServer
+
+<div class="container mt-5 text-green">
+    <h2 class="mb-4 text-center">🛒 Product Manager</h2>
+
+    <div class="card bg-dark border-secondary mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Add a New Product</h5>
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <input class="form-control bg-secondary text-white border-0" @bind="newProduct.Name" placeholder="Product Name" />
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control bg-secondary text-white border-0" @bind="newProduct.Price" placeholder="Price" type="number" />
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-success w-100" @onclick="AddProduct">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-dark border-secondary">
+        <div class="card-body">
+            <h5 class="card-title">Product List</h5>
+            <ul class="list-group list-group-flush">
+                @foreach (var p in products)
+                {
+                    <li class="list-group-item bg-dark text-white d-flex justify-content-between">
+                        <span>@p.Name</span>
+                        <span>$@p.Price</span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+@code {
+    List<Product> products = new();
+    Product newProduct = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductService.GetProductsAsync();
+    }
+
+    async Task AddProduct()
+    {
+        await ProductService.AddProductAsync(newProduct);
+        newProduct = new();
+        products = await ProductService.GetProductsAsync();
+    }
+}
