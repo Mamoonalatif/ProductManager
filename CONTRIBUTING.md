@@ -171,7 +171,7 @@ If you need help:
 - Ask questions in GitHub discussions
 - Contact the maintainers
 
-## 🙏 Recognition
+## Recognition
 
 Contributors will be recognized in:
 - README.md contributors section
